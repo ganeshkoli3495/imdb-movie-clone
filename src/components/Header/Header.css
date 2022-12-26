@@ -1,0 +1,20 @@
+.header {
+  padding: 10px;
+  justify-content: space-between;
+}
+.header__left .header__icon {
+  width: 80px;
+  object-fit: contain;
+}
+
+.header__left {
+  gap: 20px;
+}
+
+span {
+  color: var(--white);
+}
+.user{
+  width: 40px;
+  height: 40px;
+}
