@@ -24,35 +24,39 @@ const Home = () => {
         infiniteLoop={true}
         showStatus={false}
       >
-        {popularMovies.map((movie, index) => (
-          <Link
-            style={{ textDecoration: "none", color: "white" }}
-            to={`/movie/${movie.id}`}
-          >
-            <div className="posterimage" key={index}>
-              <img
-                src={`https://image.tmdb.org/t/p/original${
-                  movie && movie.backdrop_path
-                }`}
-              />
-              <div className="posterimage__overlay">
-                <div className="posterimage__title">
-                  {movie ? movie.original_title : " "}
-                </div>
-                <div className="posterimage__runtime">
-                  {movie ? movie.release_date : ""}
-                  <span className="posterimage__rating">
-                    {movie ? movie.vote_average : ""}
-                    <i className="fas fa-star" />
-                  </span>
-                </div>
-                <div className="posterimage__description">
-                  {movie ? movie.overview : ""}
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
+          {popularMovies ? (
+                    popularMovies.map((movie, index) => (
+                      <Link
+                        style={{ textDecoration: "none", color: "white" }}
+                        to={`/movie/${movie.id}`}
+                      >
+                        <div className="posterimage" key={index}>
+                          <img
+                            src={`https://image.tmdb.org/t/p/original${
+                              movie && movie.backdrop_path
+                            }`}
+                          />
+                          <div className="posterimage__overlay">
+                            <div className="posterimage__title">
+                              {movie ? movie.original_title : " "}
+                            </div>
+                            <div className="posterimage__runtime">
+                              {movie ? movie.release_date : ""}
+                              <span className="posterimage__rating">
+                                {movie ? movie.vote_average : ""}
+                                <i className="fas fa-star" />
+                              </span>
+                            </div>
+                            <div className="posterimage__description">
+                              {movie ? movie.overview : ""}
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    ))
+          ) : (
+            <h1>Loading</h1>
+          )}
       </Carousel>
       <MovieList />
     </div>

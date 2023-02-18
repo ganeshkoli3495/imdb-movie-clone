@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./MovieList.css";
 import { useParams } from "react-router-dom";
 import Card from "../Card/Card";
+
+
+
+const apikey = process.env.REACT_APP_API_KEY;
+
 const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
   const { type } = useParams();
@@ -17,7 +22,7 @@ const MovieList = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${
         type ? type : "popular"
-      }?api_key=8146ab8665b68e04382788577f92e9c5&language=en-US`
+      }?api_key=${apikey}&language=en-US`
     )
       .then((res) => res.json())
       .then((data) => setMovieList(data.results));

@@ -12,6 +12,7 @@
   border: 1px solid rgb(99, 99, 99);
 }
 
+
 .cards:hover {
   transform: scale(1.2);
   z-index: 1000;
