@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import Shimmer from "../../common/Shimmer";
 
 const Cards = ({ movie }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,11 +15,7 @@ const Cards = ({ movie }) => {
   return (
     <>
       {isLoading ?  
-        <div className="cards">
-          <SkeletonTheme color="#fff" highlightColor="#444">
-            <Skeleton height={300} duration={2} />
-          </SkeletonTheme>
-        </div>
+        <Shimmer />
        : 
         <Link
           to={`/movie/${movie.id}`}

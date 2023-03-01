@@ -1,4 +1,4 @@
-const shimmer_card_unit = 15; 
+const shimmer_card_unit = 2; 
 
 // Shimmer card to display with animation
 const CardShimmer = () => {
