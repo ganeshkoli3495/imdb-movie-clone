@@ -14,7 +14,7 @@ const Cards = ({ movie }) => {
 
   return (
     <>
-      {!isLoading ?  
+      {isLoading ?  
         <Shimmer />
        : 
         <Link
