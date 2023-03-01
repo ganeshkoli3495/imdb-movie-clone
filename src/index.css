@@ -67,3 +67,14 @@ html {
   background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
   background-size: 1000px 100%;
 }
+
+@media (max-width:468px){
+  .shimmer-card{
+    flex-basis: 180px !important;
+  }
+
+  .shimmer-img{
+    width: 163px !important;
+    height: 200px !important;
+  }
+}
