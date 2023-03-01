@@ -11,5 +11,13 @@
 .list__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
+}
+@media (max-width:468px) {
+    .movie__list{
+      padding: 0;
+    }
+    .list__cards{
+      padding: 5px;
+    }
 }

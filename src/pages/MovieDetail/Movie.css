@@ -143,3 +143,22 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width:568px) {
+    .movie__intro{
+        display: none;
+    }
+    .movie__detail{
+        flex-direction: column;
+        bottom: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .movie__links, .movie__production, .movie__heading{
+        display: none;
+    }
+    .movie__name{
+        font-size: 2rem;
+    }
+}

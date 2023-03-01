@@ -15,6 +15,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setPopularMoves(data.results));
   }, []);
+
   return (
     <div className="poster">
       <Carousel
@@ -28,9 +29,9 @@ const Home = () => {
                     popularMovies.map((movie, index) => (
                       <Link
                         style={{ textDecoration: "none", color: "white" }}
-                        to={`/movie/${movie.id}`}
+                        to={`/movie/${movie.id}`}key={index}
                       >
-                        <div className="posterimage" key={index}>
+                        <div className="posterimage" >
                           <img
                             src={`https://image.tmdb.org/t/p/original${
                               movie && movie.backdrop_path

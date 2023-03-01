@@ -12,14 +12,14 @@ const Header = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png"
           />
         </Link>
-        <Link to="/movies/popular" style={{ textDecoration: "none" }}>
-          <span>Popular</span>
+        <Link to="/movies/popular" style={{ textDecoration: "none" }} className="link">
+          Popular
         </Link>
-        <Link to="/movies/top_rated" style={{ textDecoration: "none" }}>
-          <span>Top Rated</span>
+        <Link to="/movies/top_rated" style={{ textDecoration: "none" }}className="link">
+          Top Rated
         </Link>
-        <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-          <span>Upcoming</span>
+        <Link to="/movies/upcoming" style={{ textDecoration: "none" }}className="link">
+          Upcoming
         </Link>
       </div>
       <div className="header__right flex absolute-center">

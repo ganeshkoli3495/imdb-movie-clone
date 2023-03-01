@@ -10,11 +10,29 @@
 .header__left {
   gap: 20px;
 }
-
-span {
+a.link {
   color: var(--white);
+  font-size: 15px;
 }
+
 .user{
   width: 40px;
   height: 40px;
+}
+
+@media (max-width:468px) {
+  .header__left{
+    gap:15px;
+  }
+  a.link {
+    color: var(--white);
+    font-size: 11px;
+  }
+  .header__left .header__icon{
+    width: 52px;
+  }
+  .user {
+    width: 29px;
+    height: 29px;
+}
 }
